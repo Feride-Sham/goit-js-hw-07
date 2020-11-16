@@ -5,7 +5,10 @@ inputRef.addEventListener('blur', handleInput);
 
 function handleInput(ev) {
   let userText = ev.target.value;
-  return userText.length === Number(textLenght)
-    ? inputRef.classList.add('valid')
-    : inputRef.classList.add('invalid');
+  inputRef.classList.remove('invalid');
+  if (userText.length === Number(textLenght)) {
+    inputRef.classList.add('valid');
+  } else {
+    inputRef.classList.add('invalid');
+  }
 }

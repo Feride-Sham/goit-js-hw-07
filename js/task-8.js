@@ -26,11 +26,8 @@ function createBoxes() {
 
 function deleteBoxes() {
   inputRef.value = '';
-  let numberOfChildren = boxes.children.length;
-  for (let i = numberOfChildren - 1; i >= 0; i -= 1) {
-    boxes.children[i].remove();
-  }
-  boxArr.splice(0, boxArr.length);
+  boxes.innerHTML = '';
+  box.Arr = [];
 }
 
 function getRandomColor() {
