@@ -13,7 +13,7 @@ decrBtn.addEventListener('click', () => {
   console.log(`Уменьшили на 1, текущее значение=${counterValue}`);
 });
 
-const decrement = () => (counterValue -= 1);
+const decrement = () => (counterValue > 0 ? (counterValue -= 1) : counterValue);
 
 incrBtn.addEventListener('click', () => {
   increment();
