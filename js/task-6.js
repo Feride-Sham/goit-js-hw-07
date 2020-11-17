@@ -6,6 +6,8 @@ inputRef.addEventListener('blur', handleInput);
 function handleInput(ev) {
   let userText = ev.target.value;
   inputRef.classList.remove('invalid');
+  inputRef.classList.remove('valid');
+
   if (userText.length === Number(textLenght)) {
     inputRef.classList.add('valid');
   } else {
